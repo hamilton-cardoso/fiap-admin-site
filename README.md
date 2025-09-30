@@ -37,11 +37,25 @@ O projeto estará disponível em `http://localhost:8080`
 
 ## Scripts Disponíveis
 
-- `npm run dev` - Executa o projeto em modo de desenvolvimento
-- `npm run build` - Gera o build de produção
+- `npm run dev` - Executa o projeto em modo de desenvolvimento (localhost)
+- `npm run build` - Gera o build de produção (AWS App Runner)
 - `npm run build:dev` - Gera o build em modo de desenvolvimento
+- `npm run build:prod` - Gera o build de produção
 - `npm run lint` - Executa o linter
-- `npm run preview` - Visualiza o build de produção
+- `npm run preview` - Visualiza o build de desenvolvimento
+- `npm run preview:prod` - Visualiza o build de produção
+
+## Configuração de Ambientes
+
+O projeto está configurado para trabalhar com dois ambientes:
+
+- **Desenvolvimento**: Usa `http://localhost:8080/api/v1`
+- **Produção**: Usa `https://2dwfgpkizh.us-east-1.awsapprunner.com/api/v1`
+
+Os arquivos de configuração são:
+- `.env.development` - Configurações de desenvolvimento
+- `.env.production` - Configurações de produção
+- `.env` - Configurações locais (não versionado)
 
 ## Estrutura do Projeto
 

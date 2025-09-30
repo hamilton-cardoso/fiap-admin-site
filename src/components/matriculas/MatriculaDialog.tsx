@@ -54,7 +54,8 @@ export function MatriculaDialog({ open, onOpenChange, onSuccess }: MatriculaDial
       onOpenChange(false);
       form.reset();
     } catch (error: any) {
-      toast.error(error.response?.data?.message || "Erro ao realizar matrícula");
+      const errorMessage = error.response?.data?.detail || error.response?.data?.message || "Erro ao realizar matrícula";
+      toast.error(errorMessage);
     }
   };
 
